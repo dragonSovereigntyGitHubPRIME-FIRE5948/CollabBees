@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+    <include
+        android:id="@+id/toolBar"
+        layout="@layout/layout_toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/layoutUserDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolBar">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/sivProfilePic"
+            android:layout_width="120sp"
+            android:layout_height="140sp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:layout_marginStart="15sp"
+            android:src="@drawable/ic_launcher_background"
+            app:shapeAppearanceOverlay="@style/HoneycombHex"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="20sp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Placeholder"
+                android:textSize="21sp" />
+
+            <TextView
+                android:id="@+id/tvRole"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/helvetica_oblique"
+                android:layout_marginTop="5sp"
+                android:text="Role"
+                android:textSize="14sp"
+                />
+
+            <TextView
+                android:id="@+id/tvCountry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/helvetica"
+                android:layout_marginTop="5sp"
+                android:text="Country"
+                android:textSize="14sp"
+                />
+
+            <TextView
+                android:id="@+id/tvOrganisation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/helvetica"
+                android:layout_marginTop="5dp"
+                android:text="Organisation"
+                android:textSize="14sp"
+                />
+
+            <TextView
+                android:id="@+id/tvBio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/helvetica"
+                android:layout_marginTop="3sp"
+                android:text="Bio"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:id="@+id/layoutSocialDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3sp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15sp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvConnectionsTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Connections"
+                        android:theme="@style/UserProfileSocialDetailsTitle" />
+
+                    <TextView
+                        android:theme="@style/UserProfileSocialDetails"
+                        android:id="@+id/tvConnections"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Zero" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15sp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvFollowersTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/Followers"
+                        android:theme="@style/UserProfileSocialDetailsTitle" />
+
+                    <TextView
+                        android:theme="@style/UserProfileSocialDetails"
+                        android:id="@+id/tvFollowers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Zero" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvProjectsTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Projects"
+                        android:theme="@style/UserProfileSocialDetailsTitle" />
+
+                    <TextView
+                        android:theme="@style/UserProfileSocialDetails"
+                        android:id="@+id/tvProjects"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Zero" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutSocialActions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutUserDetails"
+        >
+
+        <!-- BTN Add Friend -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAddFriend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Friend"
+            app:shapeAppearance="@style/ShapeAppearance.App.SmallComponent"
+            />
+
+        <!-- BTN Connect -->
+        <Button
+            android:id="@+id/btnFollow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Connect"
+            />
+
+        <!-- BTN Start Chat -->
+        <Button
+            android:id="@+id/btnMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Message" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btnSignOutAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign Out"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutSocialActions"
+        />
+
+    <Button
+        android:id="@+id/btnDeleteAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete Account"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnSignOutAccount"
+        />
+
+    <Button
+        android:id="@+id/btnEditProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Edit Profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnDeleteAccount"
+        />
+
+    <Button
+        android:id="@+id/btnGoogle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Google"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnEditProfile"
+        />
+
+    <Button
+        android:id="@+id/btnUpgradeAnonymous"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Upgrade Account"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnGoogle"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

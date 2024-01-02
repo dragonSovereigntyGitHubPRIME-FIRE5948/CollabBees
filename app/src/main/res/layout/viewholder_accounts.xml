@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginTop="15sp"
+    android:layout_marginStart="10sp"
+    android:layout_marginEnd="10sp"
+    >
+
+    <LinearLayout
+        android:id="@+id/layoutUserDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/sivProfilePic"
+            android:layout_width="85sp"
+            android:layout_height="85sp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_default_user"
+            app:shapeAppearanceOverlay="@style/HoneycombHex" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8sp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Username"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvRole"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5sp"
+                android:fontFamily="@font/helvetica_oblique"
+                android:text="Role"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tvCountry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5sp"
+                android:fontFamily="@font/helvetica"
+                android:text="Country"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tvOrganisation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/helvetica"
+                android:text="Organisation"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tvBio"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.5"
+        android:gravity="center"
+        android:fontFamily="@font/helvetica"
+        android:text="Bio"
+        android:textSize="12sp"
+        android:layout_marginTop="8sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutUserDetails"
+        />
+
+
+    <Button
+        android:id="@+id/btnConnect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:text="Connect"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="110dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvBio"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

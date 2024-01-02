@@ -1,0 +1,145 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+<!--    <style name="Base.Theme.CollabBees" parent="Theme.Material3.DayNight">-->
+    <style name="Base.Theme.CollabBees" parent="Theme.MaterialComponents">
+    <!-- Customize your light theme here. -->
+        <item name="buttonStyle">@style/ButtonStyle</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">@color/black</item>
+        <item name="android:windowBackground">@color/primary</item>
+
+        <item name="textInputStyle">@style/TextInputLayoutStyle</item>
+
+        <!-- Button -->
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.App.SmallComponent</item>
+
+<!--        <item name="windowActionBar">false</item>-->
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+
+    <!-- STYLE SIGN-IN ACTIVITY -->
+<!--    <style name="LoginTheme" parent="AppTheme">-->
+<!--        <item name="colorPrimary">@color/colorPrimary</item>-->
+<!--        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+<!--        <item name="colorAccent">@color/colorAccent</item>-->
+<!--        <item name="colorButtonNormal">@color/colorAccent</item>-->
+<!--        <item name="colorControlNormal">@android:color/darker_gray</item>-->
+<!--        <item name="colorControlActivated">@android:color/darker_gray</item>-->
+<!--        <item name="colorControlHighlight">@android:color/darker_gray</item>-->
+<!--        <item name="android:textColor">@android:color/white</item>-->
+<!--        <item name="android:textColorPrimary">@android:color/darker_gray</item>-->
+<!--        <item name="android:textColorSecondary">@android:color/darker_gray</item>-->
+<!--        <item name="android:windowBackground">@android:color/white</item>-->
+<!--        <item name="windowActionBar">false</item>-->
+<!--        <item name="windowNoTitle">true</item>-->
+<!--        <item name="android:textColorHint">@android:color/darker_gray</item>-->
+<!--    </style>-->
+
+<!--    <style name="Theme.CollabBees" parent="Base.Theme.CollabBees"/>-->
+
+    <!-- Toolbar -->
+    <style name="ToolbarTitleStyle" parent="Widget.AppCompat.TextView">
+        <item name="android:fontFamily">@font/righteous</item>
+        <item name="android:textSize">23sp</item>
+        <item name="android:textColor">@color/primary</item>
+    </style>
+
+    <!-- Toolbar Chat -->
+    <style name="ToolbarChatTitleStyle" parent="ToolbarTitleStyle">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="ToolbarChatTextStyle" parent="ToolbarTitleStyle">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/helvetica</item>
+    </style>
+
+    <!-- Header Style -->
+    <style name="HeaderStyle" parent="Widget.AppCompat.TextView">
+        <item name="android:fontFamily">@font/righteous</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+<!--    <style name="EditTextStyle" parent="FirebaseUI.TextInputEditText.EmailField">-->
+
+    <!-- TextInputStyle Style -->
+    <style name="TextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="android:fontFamily">@font/helvetica</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">@color/black</item>
+    </style>
+
+    <!-- TextInputStyle Style -->
+    <style name="TextInputStyle" parent="Widget.MaterialComponents.TextInputEditText.OutlinedBox">
+        <item name="android:fontFamily">@font/helvetica</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!-- Button Style -->
+    <style name="ButtonStyle" parent="Widget.MaterialComponents.Button">
+        <item name="android:backgroundTint">@color/black</item>
+        <item name="colorOnPrimary">@color/primary</item>
+        <item name="android:padding">15sp</item>
+        <item name="android:paddingStart">35sp</item>
+        <item name="android:paddingEnd">35sp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/righteous</item>
+    </style>
+
+    <!-- Button Outlined Style -->
+    <style name="ButtonOutlinedStyle" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:backgroundTint">@color/fui_transparent</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="strokeWidth">5sp</item>
+        <item name="strokeColor">@color/black</item>
+        <item name="android:padding">15sp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/righteous</item>
+    </style>
+
+    <!-- Button Outlined Icon Style -->
+    <style name="ButtonOutlinedIconStyle" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:backgroundTint">@color/fui_transparent</item>
+        <item name="strokeWidth">5sp</item>
+        <item name="strokeColor">@color/black</item>
+        <item name="android:textSize">26sp</item>
+    </style>
+
+    <style name="ShapeAppearance.App.SmallComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSize">13sp</item>
+    </style>
+
+    <!-- Custom theme for sign in activity -->
+    <style name="SignInTheme" parent="FirebaseUI">
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryVariant">@color/black</item>
+        <item name="colorAccent">@color/red</item>
+        <item name="android:colorBackground">@color/primary</item>
+        <item name="fontFamily">@font/righteous</item>
+    </style>
+
+    <!-- Shape ImageView -->
+    <style name="HoneycombHex" parent="">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSize">20%</item>
+    </style>
+
+    <!-- UserProfileSocialDetailsTitle Style -->
+    <style name="UserProfileSocialDetailsTitle" parent="Widget.AppCompat.TextView">
+        <item name="android:fontFamily">@font/helvetica</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_marginBottom">3dp</item>
+    </style>
+
+    <!-- UserProfileSocialDetailsTitle -->
+    <style name="UserProfileSocialDetails" parent="Widget.AppCompat.TextView">
+        <item name="android:fontFamily">@font/helvetica</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+</resources>

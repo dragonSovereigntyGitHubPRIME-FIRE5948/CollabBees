@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+    <include
+        android:id="@+id/toolBar"
+        layout="@layout/layout_toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/layoutUserDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolBar">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/sivProfilePic"
+            android:layout_width="135sp"
+            android:layout_height="150sp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:layout_marginStart="10sp"
+            android:layout_marginEnd="15sp"
+            android:src="@drawable/img_default_user"
+            app:shapeAppearanceOverlay="@style/HoneycombHex"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="8sp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvRole"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/helvetica_oblique"
+                android:layout_marginTop="5sp"
+                android:text="Role"
+                android:textSize="14sp"
+                />
+
+            <TextView
+                android:id="@+id/tvCountry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/helvetica"
+                android:layout_marginTop="5sp"
+                android:text="Country"
+                android:textSize="14sp"
+                />
+
+            <TextView
+                android:id="@+id/tvOrganisation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/helvetica"
+                android:layout_marginTop="5dp"
+                android:text="Organisation"
+                android:textSize="14sp"
+                />
+
+            <TextView
+                android:id="@+id/tvBio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/helvetica"
+                android:layout_marginTop="3sp"
+                android:text="Bio"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:id="@+id/layoutSocialDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3sp"
+                android:orientation="horizontal">
+
+                <!-- TV No. of Friends -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15sp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvConnectionsTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Connections"
+                        android:theme="@style/UserProfileSocialDetailsTitle" />
+
+                    <TextView
+                        android:theme="@style/UserProfileSocialDetails"
+                        android:id="@+id/tvConnections"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Zero" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15sp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvFollowersTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/Followers"
+                        android:theme="@style/UserProfileSocialDetailsTitle" />
+
+                    <TextView
+                        android:theme="@style/UserProfileSocialDetails"
+                        android:id="@+id/tvFollowers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Zero" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvProjectsTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Projects"
+                        android:theme="@style/UserProfileSocialDetailsTitle" />
+
+                    <TextView
+                        android:theme="@style/UserProfileSocialDetails"
+                        android:id="@+id/tvProjects"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Zero" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutSocialActions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutUserDetails"
+        >
+
+        <!-- BTN Connect -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnConnect"
+            android:theme="@style/ButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:layout_marginStart="10sp"
+            android:layout_marginEnd="10sp"
+            android:visibility="gone"
+            android:text="@string/Connect"
+            />
+
+        <!-- BTN Connected -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnConnected"
+            android:theme="@style/ButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:icon="@drawable/ic_arrow_down"
+            app:iconGravity="textEnd"
+            android:layout_weight="50"
+            app:iconPadding="10sp"
+            android:layout_marginStart="10sp"
+            android:layout_marginEnd="10sp"
+            android:text="@string/Connected"
+            android:visibility="gone"
+            />
+
+        <!-- BTN Following -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnFollowing"
+            android:theme="@style/ButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:icon="@drawable/ic_arrow_down"
+            app:iconGravity="textEnd"
+            app:iconPadding="10sp"
+            android:layout_marginEnd="10sp"
+            android:layout_weight="50"
+            android:text="@string/Following"
+            android:layout_marginStart="10sp"
+            />
+
+        <!-- BTN Invite to project -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnProjectInvite"
+            android:theme="@style/ButtonOutlinedIconStyle"
+            android:layout_width="55sp"
+            android:layout_height="match_parent"
+            app:icon="@drawable/ic_message"
+            app:iconGravity="textStart"
+            android:layout_weight="0.1"
+            android:layout_marginStart="-3sp"
+            android:layout_marginEnd="7sp"
+            android:padding="0dp"
+            app:iconPadding="0sp"
+            />
+
+        <!-- BTN Start chat -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnMessage"
+            android:theme="@style/ButtonOutlinedIconStyle"
+            android:layout_width="55sp"
+            android:layout_height="match_parent"
+            app:icon="@drawable/ic_message"
+            app:iconGravity="textStart"
+            android:layout_weight="0.1"
+            android:padding="0dp"
+            android:layout_marginEnd="10sp"
+            app:iconPadding="0sp" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

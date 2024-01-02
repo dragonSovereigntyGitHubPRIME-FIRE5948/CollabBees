@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.CollabBees.Splash" parent="Theme.SplashScreen">
+
+        <!-- Use windowSplashScreenAnimatedIcon to add either a drawable or an
+                   animated drawable. One of these is required. -->
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_logo_foreground</item>
+
+        <!-- Set the splash screen background, animated icon, and animation duration. -->
+        <item name="windowSplashScreenBackground">@color/primary</item>
+        <item name="android:windowBackground">@color/primary</item>
+
+        <!-- Set the theme of the Activity that directly follows your splash screen. -->
+        <item name="postSplashScreenTheme">@style/Base.Theme.CollabBees</item>
+
+
+<!--        <item name="windowSplashScreenAnimatedIcon">@drawable/...</item>-->
+        <!-- Required for animated icons -->
+<!--        <item name="windowSplashScreenAnimationDuration">1500</item>-->
+
+
+
+    </style>
+    
+</resources>

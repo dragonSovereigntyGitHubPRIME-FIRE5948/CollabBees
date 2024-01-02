@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_toolbar"
+        android:layout_marginBottom="20sp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginTop="13sp"
+            >
+
+            <ImageButton
+                android:id="@+id/btnReturn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/fui_transparent"
+                android:layout_weight="1.5"
+                android:layout_marginEnd="80sp"
+                android:src="@drawable/ic_back" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/sivChatRoomPic"
+                android:layout_width="38sp"
+                android:layout_height="38sp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_default_user"
+                app:shapeAppearanceOverlay="@style/HoneycombHex" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginStart="80sp"
+                android:layout_weight="1"
+                android:layout_gravity="end">
+
+                <ImageButton
+                    android:id="@+id/ibtnConfirm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@color/fui_transparent"
+                    android:src="@drawable/ic_check" />
+
+                <ImageButton
+                    android:id="@+id/ibtnCamera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@color/fui_transparent"
+                    android:src="@drawable/ic_check" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:theme="@style/ToolbarChatTitleStyle"
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:textColor="@color/primary"
+            android:layout_marginTop="9sp"
+            android:text="@string/Placeholder" />
+
+        <TextView
+            android:theme="@style/ToolbarChatTextStyle"
+            android:id="@+id/tvLastSeen"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:textColor="@color/primary"
+            android:layout_marginTop="4sp"
+            android:layout_marginBottom="5sp"
+            android:text="@string/Placeholder" />
+    </LinearLayout>
+</RelativeLayout>

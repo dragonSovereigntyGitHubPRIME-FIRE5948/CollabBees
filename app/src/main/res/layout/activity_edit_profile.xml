@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditProfileActivity">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/sivProfilePic"
+        android:layout_width="100sp"
+        android:layout_height="100sp"
+        android:layout_weight="1"
+        android:layout_gravity="center_vertical"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_launcher_background"
+        app:shapeAppearanceOverlay="@style/HoneycombHex"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:theme="@style/HeaderStyle"
+        android:id="@+id/tvPersonalDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:text="@string/Personal_Details"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sivProfilePic"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etlUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:hint="Username"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPersonalDetails">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:theme="@style/TextInputStyle"
+            android:id="@+id/etUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/untitled_1"
+            android:paddingStart="70dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginTop="10sp"
+        android:inputType="text"
+        android:text="Email"
+        android:paddingStart="90dp"
+        android:background="@drawable/untitled_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etlUsername"
+        />
+
+    <EditText
+        android:id="@+id/etDesc"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:ems="10"
+        android:inputType="text|textMultiLine"
+        android:gravity="top"
+        android:text="Desc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etEmail"
+        />
+
+    <Button
+        android:id="@+id/btnSaveChanges"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Save_Changes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etDesc"
+        android:layout_marginStart="30sp"
+        android:layout_marginEnd="30sp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

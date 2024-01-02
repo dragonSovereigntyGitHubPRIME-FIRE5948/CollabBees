@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "756467415933",
+    "firebase_url": "https://collabbuddies-e573d-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "collabbuddies-e573d",
+    "storage_bucket": "collabbuddies-e573d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:756467415933:android:1c1aab4642f61c9699aa14",
+        "android_client_info": {
+          "package_name": "com.example.collabbees"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "756467415933-89f5jlkb1tt7il0spr7tlcnhbbsotadh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.collabbees",
+            "certificate_hash": "19de0a733bb7af8ceb2b309b4c66c906511c71ee"
+          }
+        },
+        {
+          "client_id": "756467415933-s4on5vgnnh75ae0de2l32mo8go3j2kr6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDp_sVguOs-9uoHofMmthMH5vfBt3wI4M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "756467415933-juc0740muspbrgdstu6j5a6f0oj0i46e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
